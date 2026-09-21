@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rede Acolhe Mirandiba</title>
+    <!-- CSS Leaflet para o Mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <span>Rede Acolhe Mirandiba</span>
+        </div>
+        <nav>
+            <a href="#ajuda-rapida">Como Ajudar / Buscar Ajuda</a>
+            <a href="#mapa">Mapa da Solidariedade</a>
+            <a href="#calendario">Calendário de Ações</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal (Hero) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Transformando Vidas em Mirandiba</h1>
+            <p>Conectando quem precisa de apoio a quem quer ajudar. Encontre pontos de acolhimento, alimentação e doações na nossa cidade.</p>
+            <a href="#ajuda-rapida" class="btn-hero">Acesse Rápido</a>
+        </div>
+    </section>
+
+    <!-- Ações / Ajuda Rápida (Direcionamento WhatsApp) -->
+    <section id="ajuda-rapida" class="container">
+        <h2>Como Você Pode Participar?</h2>
+        <p class="section-subtitle">Dê um clique para falar diretamente conosco pelo WhatsApp:</p>
+
+        <div class="grid-cards">
+            <!-- Card Doar Roupas e Kits -->
+            <div class="card">
+                <i class="fa-solid fa-shirt card-icon"></i>
+                <h3>Quero Doar Roupas & Kits</h3>
+                <p>Doe roupas, calçados e kits de higiene nos nossos pontos comerciais fixos ou agende uma entrega.</p>
+                <a href="https://wa.me/5587999999999?text=Ol%C3%A1!%20Gostaria%20de%20fazer%20uma%20doa%C3%A7%C3%A3o%20de%20roupas%20ou%20kits%20de%20higiene." target="_blank" class="btn-action">
+                    <i class="fa-brands fa-whatsapp"></i> Quero Doar
+                </a>
+            </div>
+
+            <!-- Card Banho Solidário -->
+            <div class="card">
+                <i class="fa-solid fa-shower card-icon"></i>
+                <h3>Banho Solidário & Higiene</h3>
+                <p>Saiba onde levar uma pessoa em situação de rua para tomar um banho digno e receber higiene.</p>
+                <a href="https://wa.me/5587999999999?text=Ol%C3%A1!%20Preciso%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20ponto%20de%20banho%20solid%C3%A1rio." target="_blank" class="btn-action">
+                    <i class="fa-brands fa-whatsapp"></i> Encontrar Banho
+                </a>
+            </div>
+
+            <!-- Card Sopão & Alimentação -->
+            <div class="card">
+                <i class="fa-solid fa-bowl-rice card-icon"></i>
+                <h3>Sopão & Refeições</h3>
+                <p>Confira datas, ajude no preparo do sopão comunitário ou indique alguém necessitado.</p>
+                <a href="https://wa.me/5587999999999?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20as%20entregas%20do%20Sop%C3%A3o." target="_blank" class="btn-action">
+                    <i class="fa-brands fa-whatsapp"></i> Quero Ajudar / Receber
+                </a>
+            </div>
+
+            <!-- Card Apoio Social -->
+            <div class="card">
+                <i class="fa-solid fa-hands-holding-child card-icon"></i>
+                <h3>Apoio Social & Direitos</h3>
+                <p>Encaminhamento para o CRAS, Conselho Tutelar e Posto de Saúde de Mirandiba.</p>
+                <a href="https://wa.me/5587999999999?text=Ol%C3%A1!%20Preciso%20de%20ajuda%20com%20servi%C3%A7os%20sociais%20e%20sa%C3%BAde." target="_blank" class="btn-action">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir Orientação
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa da Solidariedade -->
+    <section id="mapa-section" class="container">
+        <h2>Mapa da Solidariedade em Mirandiba</h2>
+        <p class="section-subtitle">Localize pontos essenciais da cidade que muitos não sabem onde ficam:</p>
+        <div id="mapa"></div>
+    </section>
+
+    <!-- Calendário de Ações -->
+    <section id="calendario" class="container">
+        <h2>Calendário de Ações Solidárias</h2>
+        <p class="section-subtitle">Acompanhe nossas datas e ajude a divulgar:</p>
+
+        <div class="agenda-list">
+            <div class="agenda-item">
+                <div class="agenda-data">Toda Terça | 18:00</div>
+                <div class="agenda-info">
+                    <h3>Sopão Comunitário</h3>
+                    <p>Distribuição de refeições quentes e pães para famílias carentes e pessoas em situação de rua.</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-data">Toda Quinta | 15:00</div>
+                <div class="agenda-info">
+                    <h3>Entrega na Igreja Matriz</h3>
+                    <p>Entrega de cestas básicas, roupas e acolhimento espiritual.</p>
+                </div>
+            </div>
+
+            <div class="agenda-item">
+                <div class="agenda-data">Sábado | 09:00</div>
+                <div class="agenda-info">
+                    <h3>Dia do Banho & Higiene Solidária</h3>
+                    <p>Espaço reservado com chuveiros, roupas limpas e kits de higiene pessoal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 Rede Acolhe Mirandiba. Todos os direitos reservados. Feito com amor para a comunidade.</p>
+    </footer>
+
+    <!-- JS Leaflet para o Mapa -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- JS Principal -->
+    <script src="script.js"></script>
+</body>
+</html>
